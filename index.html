@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎣 Phishing Awareness Simulator</h1>
+
+        <p class="subtitle">
+            Test your ability to identify phishing emails.
+        </p>
+
+        <div class="warning">
+            ⚠️ Educational simulation only. No real passwords or
+            personal information are collected.
+        </div>
+
+        <div class="progress">
+            Question <span id="question-number">1</span> of
+            <span id="total-questions">5</span>
+        </div>
+
+        <div class="email-box">
+
+            <div class="email-header">
+                <p>
+                    <strong>From:</strong>
+                    <span id="sender"></span>
+                </p>
+
+                <p>
+                    <strong>Subject:</strong>
+                    <span id="subject"></span>
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="email-message">
+                <p id="message"></p>
+
+                <a href="#" id="fake-link" onclick="return false;">
+                    Verify Account
+                </a>
+            </div>
+
+        </div>
+
+        <h2>What do you think?</h2>
+
+        <div class="buttons">
+
+            <button
+                class="phishing-btn"
+                onclick="checkAnswer('phishing')">
+                🚨 Phishing
+            </button>
+
+            <button
+                class="safe-btn"
+                onclick="checkAnswer('safe')">
+                ✅ Safe
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+        <button
+            id="next-btn"
+            class="next-btn"
+            onclick="nextQuestion()"
+            style="display: none;">
+            Next Question →
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
